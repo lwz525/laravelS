@@ -23,3 +23,6 @@ $process->write('php --version');
 // 从子进程读取返回数据并打印
 $msg = $process->read();
 echo 'result from worker: ' . $msg;
+/*
+ * @see https://laravelacademy.org/post/19749.html
+ */
