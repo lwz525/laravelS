@@ -57,7 +57,14 @@ return [
     		TestEventListener::class
 	    ]
     ],
-    'swoole_tables'            => [],
+    'swoole_tables'            => [
+    	'ws' => [// 表名，会加上 Table 后缀，比如这里是 wsTable
+    		'size' => 102400,//容量
+		    'column' => [ // 表字段，字段名为 value
+			    ['name' => 'value', 'type' => \Swoole\Table::TYPE_INT, 'size' => 8],
+		    ],
+	    ]
+    ],
     'register_providers'       => [],
     'cleaners'                 => [
         //Hhxsv5\LaravelS\Illuminate\Cleaners\SessionCleaner::class, // If you use the session or authentication in your project, please uncomment this line
